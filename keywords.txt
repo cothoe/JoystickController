@@ -1,0 +1,34 @@
+#######################################
+# Syntax Coloring Map for JoystickController
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+JoystickController	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+update 	KEYWORD2
+getDirection 	KEYWORD2
+upButtonPressed 	KEYWORD2
+downButtonPressed 	KEYWORD2
+leftButtonPressed 	KEYWORD2
+rightButtonPressed 	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+DIRECTION_NONE	LITERAL1
+DIRECTION_UP 	LITERAL1
+DIRECTION_RIGHT_UP	LITERAL1
+DIRECTION_RIGHT	LITERAL1
+DIRECTION_RIGHT_DOWN 	LITERAL1
+DIRECTION_DOWN       	LITERAL1
+DIRECTION_LEFT_DOWN  	LITERAL1
+DIRECTION_LEFT       	LITERAL1
+DIRECTION_LEFT_UP   	LITERAL1
