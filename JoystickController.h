@@ -61,11 +61,6 @@ class JoystickController{
     bool downButtonPressed();
     bool leftButtonPressed();
     bool rightButtonPressed();
-    
-    /**
-     * Returns true if the select button (directional keypad) is being pressed, otherwise false.
-     */
-    bool selectButtonPressed();
 };
 
 #endif

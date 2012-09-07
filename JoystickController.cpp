@@ -27,10 +27,6 @@ int JoystickController::getDirection(){
   return _direction; 
 }
 
-bool JoystickController::selectButtonPressed(){
-  return _selectButtonPressed;
-}
-
 bool JoystickController::upButtonPressed(){
   return _upButtonPressed;
 }
@@ -52,7 +48,6 @@ bool JoystickController::rightButtonPressed(){
  */
 void JoystickController::_reset(){
   _direction = DIRECTION_NONE;
-  _selectButtonPressed = false;
   _upButtonPressed     = false;
   _downButtonPressed   = false;
   _leftButtonPressed   = false;
@@ -63,9 +58,6 @@ void JoystickController::_reset(){
  * Protected.
  */
 void JoystickController::_setup(){
-  pinMode(PIN_BUTTON_SELECT, INPUT);
-  digitalWrite(PIN_BUTTON_SELECT, HIGH);
-  
   pinMode(PIN_BUTTON_UP, INPUT);
   digitalWrite(PIN_BUTTON_UP, HIGH);
   
@@ -149,15 +141,10 @@ void JoystickController::_updateDirection(){
  * Protected.
  */
 void JoystickController::_updateButtons(){
-  int S = digitalRead(PIN_BUTTON_SELECT);
   int U = digitalRead(PIN_BUTTON_UP);
   int D = digitalRead(PIN_BUTTON_DOWN);
   int L = digitalRead(PIN_BUTTON_LEFT);
   int R = digitalRead(PIN_BUTTON_RIGHT);
-  
-  if (this->_buttonPressed(S)){
-    _selectButtonPressed = true;
-  }
     
   if (this->_buttonPressed(U)){
     _upButtonPressed = true;
