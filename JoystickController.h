@@ -28,13 +28,13 @@ class JoystickController{
      */
     static const int DIRECTION_NONE       = 0;
     static const int DIRECTION_UP         = 1;
-    static const int DIRECTION_RIGHT_UP   = 2;
+    static const int DIRECTION_UP_RIGHT   = 2;
     static const int DIRECTION_RIGHT      = 3;
-    static const int DIRECTION_RIGHT_DOWN = 4;
+    static const int DIRECTION_DOWN_RIGHT = 4;
     static const int DIRECTION_DOWN       = 5;
-    static const int DIRECTION_LEFT_DOWN  = 6;
+    static const int DIRECTION_DOWN_LEFT  = 6;
     static const int DIRECTION_LEFT       = 7;
-    static const int DIRECTION_LEFT_UP    = 8;
+    static const int DIRECTION_UP_LEFT    = 8;
     
     /**
      * Constructor. The first argument specifies the lower threshould value for the directional key pad, 

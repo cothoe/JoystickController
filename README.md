@@ -1,6 +1,6 @@
 # JoystickController
 
-Fully compatible with SparkFun's [Arduino joystick shield](https://www.sparkfun.com/products/9760?). The class lets you easily fetch the current status of the joystick. Implementation is quite simple;
+Fully compatible with SparkFun's [Arduino joystick shield](https://www.sparkfun.com/products/9760?). The class lets you easily fetch the current status of the joystick (demo video is [here](https://vimeo.com/49010406)). Implementation is quite simple;
 
 	JoystickController(int low = DEFAULT_LOW, int high = DEFAULT_HIGH)
 
@@ -21,13 +21,13 @@ returns the current direction of the directional keypad as integer values that a
 
 	static const int DIRECTION_NONE       = 0;
 	static const int DIRECTION_UP         = 1;
-	static const int DIRECTION_RIGHT_UP   = 2;
+	static const int DIRECTION_UP_RIGHT   = 2;
 	static const int DIRECTION_RIGHT      = 3;
-	static const int DIRECTION_RIGHT_DOWN = 4;
+	static const int DIRECTION_DOWN_RIGHT = 4;
 	static const int DIRECTION_DOWN       = 5;
-	static const int DIRECTION_LEFT_DOWN  = 6;
+	static const int DIRECTION_DOWN_LEFT  = 6;
 	static const int DIRECTION_LEFT       = 7;
-	static const int DIRECTION_LEFT_UP    = 8;
+	static const int DIRECTION_UP_LEFT    = 8;
 
 Finally buttons' status can be fetched from the following functions:
 

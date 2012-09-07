@@ -125,10 +125,10 @@ void JoystickController::_updateDirection(){
       _direction = DIRECTION_RIGHT;
     }
     if (directY == POSITIVE){
-      _direction = DIRECTION_RIGHT_UP;
+      _direction = DIRECTION_UP_RIGHT;
     }
     if (directY == NEGATIVE){
-      _direction = DIRECTION_RIGHT_DOWN;
+      _direction = DIRECTION_DOWN_RIGHT;
     }
   }
   
@@ -137,10 +137,10 @@ void JoystickController::_updateDirection(){
       _direction = DIRECTION_LEFT;
     }
     if (directY == POSITIVE){
-      _direction = DIRECTION_LEFT_UP;
+      _direction = DIRECTION_UP_LEFT;
     }
     if (directY == NEGATIVE){
-      _direction = DIRECTION_LEFT_DOWN;
+      _direction = DIRECTION_DOWN_LEFT;
     }
   }
 }

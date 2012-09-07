@@ -35,26 +35,26 @@ void loop(){
     case  JoystickController::DIRECTION_UP:
       Serial.println("UP");
       break;
-    case  JoystickController::DIRECTION_RIGHT_UP:
-      Serial.println("RIGHT-UP");
+    case  JoystickController::DIRECTION_UP_RIGHT:
+      Serial.println("UP-RIGHT");
       break;
     case  JoystickController::DIRECTION_RIGHT:
       Serial.println("RIGHT");
       break;
-    case  JoystickController::DIRECTION_RIGHT_DOWN:
-      Serial.println("RIGHT-DOWN");
+    case  JoystickController::DIRECTION_DOWN_RIGHT:
+      Serial.println("DOWN-RIGHT");
       break;
     case  JoystickController::DIRECTION_DOWN:
       Serial.println("DOWN");
       break;
-    case  JoystickController::DIRECTION_LEFT_DOWN:
-      Serial.println("LEFT-DOWN");
+    case  JoystickController::DIRECTION_DOWN_LEFT:
+      Serial.println("DOWN-LEFT");
       break;
     case  JoystickController::DIRECTION_LEFT:
       Serial.println("LEFT");
       break;
-    case  JoystickController::DIRECTION_LEFT_UP:
-      Serial.println("LEFT-UP");
+    case  JoystickController::DIRECTION_UP_LEFT:
+      Serial.println("UP-LEFT");
       break;
   }
   
