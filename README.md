@@ -35,7 +35,6 @@ Finally buttons' status can be fetched from the following functions:
 	bool downButtonPressed()
 	bool leftButtonPressed()
 	bool rightButtonPressed()
-	bool selectButtonPressed()
 
 They return true if a button is being pressed, otherwise false.
 
