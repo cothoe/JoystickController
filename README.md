@@ -1,6 +1,6 @@
 # JoystickController
 
-Fully compatible with SparkFun's [Arduino joystick shield](https://www.sparkfun.com/products/9760?). The class lets you easily fetch the current status of the joystick (demo video is [here](https://vimeo.com/49010406)). Implementation is quite simple;
+Fully compatible with SparkFun's [Arduino joystick shield](https://www.sparkfun.com/products/9760?). The library lets you easily fetch the current status of the joystick (demo video is [here](https://vimeo.com/49010406)). Implementation is quite simple;
 
 	JoystickController(int low = DEFAULT_LOW, int high = DEFAULT_HIGH)
 
@@ -9,11 +9,11 @@ is a constructor. The first argument specifies the lower threshold value for the
 	static const int DEFAULT_LOW   = 490;
 	static const int DEFAULT_HIGH  = 530;
 
-For more information about the threshold see the following article; [Joystick Shield Quickstart Guide: How do I find the current direction of the joystick?](http://www.sparkfun.com/tutorials/171#direction)
+For more information about the threshold see the following article; [How do I find the current direction of the joystick?](http://www.sparkfun.com/tutorials/171#direction)
 
 	void update()
 
-must get called in the main loop in order for the class to communicate with the joystick.
+must get called in the main loop in order for the library to communicate with the joystick.
 
 	int getDirection()
 
@@ -38,6 +38,77 @@ Finally buttons' status can be fetched from the following functions:
 	bool selectButtonPressed()
 
 They return true if a button is being pressed, otherwise false.
+
+## Example
+
+Here is a simple example for the library implementation.
+
+	#include "JoystickController.h"
+
+	JoystickController controller;
+
+	void setup(){
+		Serial.begin(9600);
+	}
+	
+	void loop(){
+		controller.update();
+
+		if (controller.selectButtonPressed()){
+			Serial.println("S");
+		}
+	
+		if (controller.upButtonPressed()){
+			Serial.println("U");
+		}
+
+		if (controller.downButtonPressed()){
+			Serial.println("D");
+		}
+
+		if (controller.leftButtonPressed()){
+			Serial.println("L");
+		}
+	
+		if (controller.rightButtonPressed()){
+			Serial.println("R");
+		}
+
+		int direct = controller.getDirection();
+	
+		switch (direct){
+			case  JoystickController::DIRECTION_UP:
+				Serial.println("UP");
+				break;
+			case  JoystickController::DIRECTION_UP_RIGHT:
+				Serial.println("UP-RIGHT");
+				break;
+			case  JoystickController::DIRECTION_RIGHT:
+				Serial.println("RIGHT");
+				break;
+			case  JoystickController::DIRECTION_DOWN_RIGHT:
+				Serial.println("DOWN-RIGHT");
+				break;
+			case  JoystickController::DIRECTION_DOWN:
+				Serial.println("DOWN");
+				break;
+			case  JoystickController::DIRECTION_DOWN_LEFT:
+				Serial.println("DOWN-LEFT");
+				break;
+			case  JoystickController::DIRECTION_LEFT:
+				Serial.println("LEFT");
+				break;
+			case  JoystickController::DIRECTION_UP_LEFT:
+				Serial.println("UP-LEFT");
+				break;
+		}
+
+		delay(100);
+	}
+
+## Related articles
+
+* [Arduino joystick controller library](http://blog.boreal-kiss.net/2012/09/07/arduino-joystick-controller-library/)
 
 ## License
 
